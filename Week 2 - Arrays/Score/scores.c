@@ -4,10 +4,13 @@
 int main(void)
 {
     // Taking User Input of Scores
-    double score1 = get_int("Give me a Score: ");
-    double score2 = get_int("Give me a Score: ");
-    double score3 = get_int("Give me a Score: ");
+    int scores[3];
 
+    for (int i = 0; i < 3; i++)
+    {
+        scores[i] = get_int("Score: ");
+    }
+    
     // Calculating and Printing the Average
-    printf("Average Score: %f\n", (score1 + score2 + score3) /3);
+    printf("Average Score: %f\n", (scores[0] + scores[1] + scores[2]) /3.0);
 }
