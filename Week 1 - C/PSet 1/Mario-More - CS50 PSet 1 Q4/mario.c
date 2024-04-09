@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <stdio.h>
 
 // Telling that this functions are present later in the code (To avoid error)
@@ -14,7 +13,11 @@ int main(void)
     // Asks user for a positive integer between 1 and 8 inclusive
     do
     {
-        h = get_int("Height: ");
+        h;
+
+        printf("Height: ");
+
+        scanf("%i", &h);
     }
     while (h < 1 || h > 8);
 
