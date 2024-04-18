@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    char s[99999999];
+    char s[100];
 
     printf("s: ");
 
