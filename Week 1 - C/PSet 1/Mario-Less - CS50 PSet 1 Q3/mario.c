@@ -2,61 +2,39 @@
 #include <stdio.h>
 
 // Telling that this functions are present later in the code (To avoid error)
-void prinths(int p);
-void prints(int q);
+void triangle(int n);
 
 int main(void)
 {
-
-    // Defining some Important Variables
-    int h, hs, r, s;
+    // Declaring And Initializing Height Variable
+    int height = 0;
 
     // Asks user for a positive integer
     do
     {
-        h = get_int("Height: ");
+        height;
+        printf("Height: ");
+        scanf("%d", &height);
     }
-    while (h < 1);
+    while (height < 1);
 
-    // Initializing Variables (To avoid Unintialized error later)
-    hs = 1;
-    r = 1;
-
-    for (int o = 0; o < h; o++)
-    {
-
-        // Number of Spaces Dermining Formula
-        s = h - r;
-
-        // Printing Spaces
-        prints(s);
-
-        // Printing Hashes
-        prinths(hs);
-
-        // Move Cursor to the Next Line
-        printf("\n");
-
-        // Incrementing Variable
-        hs++;
-        r++;
-    }
+    // Printing Triangle Staircase
+    triangle(height);
 }
 
-// Function for Printing Hashes ("#")
-void prinths(int p)
+// Function for Printing Triangles
+void triangle(int n)
 {
-    for (int i = 0; i < p; i++)
-    {
-        printf("#");
-    }
-}
-
-// Funtion for Printing Spaces (" ")
-void prints(int q)
-{
-    for (int w = 0; w < q; w++)
-    {
-        printf(" ");
-    }
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = n - 1 - i; j >= 1; j--)
+		{
+			printf(" "); // Printing Spaces
+		}
+		for (int j = 1; j < i + 2; j++)
+		{
+			printf("#"); // Printing Hashes
+		}
+		printf("\n");
+	}
 }

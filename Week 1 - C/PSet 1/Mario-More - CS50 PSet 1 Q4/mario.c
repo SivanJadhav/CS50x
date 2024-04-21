@@ -1,71 +1,48 @@
 #include <stdio.h>
 
 // Telling that this functions are present later in the code (To avoid error)
-void prinths(int p);
-void prints(int q);
+void triangle(int n);
 
 int main(void)
 {
-
-    // Defining some Important Variables
-    int h, hs, r, s;
+    // Defining and Initializing Variable
+    int height = 0;
 
     // Asks user for a positive integer between 1 and 8 inclusive
     do
     {
-        h;
+        height;
 
         printf("Height: ");
 
-        scanf("%i", &h);
+        scanf("%i", &height);
     }
-    while (h < 1 || h > 8);
+    while (height < 1 || height > 8);
 
-    // Initializing Variables (To avoid Unintialized error later)
-    hs = 1;
-    r = 1;
-
-    for (int o = 0; o < h; o++)
-    {
-
-        // Number of Spaces Dermining Formula
-        s = h - r;
-
-        // Printing Spaces
-        prints(s);
-
-        // Printing Hashes
-        prinths(hs);
-
-        // Printing 2 Spaces
-        prints(2);
-
-        // Printing Hashes Again
-        prinths(hs);
-
-        // Move Cursor to the Next Line
-        printf("\n");
-
-        // Incrementing Variable
-        hs++;
-        r++;
-    }
+    // Printing Triangles
+    triangle(height);
 }
 
-// Function for Printing Hashes ("#")
-void prinths(int p)
+// Function for Printing Triangle
+void triangle(int n)
 {
-    for (int i = 0; i < p; i++)
+    for (int i = 0; i < n; i++)
     {
-        printf("#");
-    }
-}
+    	for (int j = n - 1 - i; j >= 1; j--)
+    	{
+    		printf(" "); // Printing Spaces
+    	}
+    	for (int j = 1; j < i + 2; j++)
+    	{
+    		printf("#"); // Printing Hashes
+    	}
+        printf("  ");
 
-// Funtion for Printing Spaces (" ")
-void prints(int q)
-{
-    for (int w = 0; w < q; w++)
-    {
-        printf(" ");
+        for (int j = 1; j < i + 2; j++)
+    	{
+    		printf("#"); // Printing Hashes
+    	}
+
+    	printf("\n");
     }
 }
