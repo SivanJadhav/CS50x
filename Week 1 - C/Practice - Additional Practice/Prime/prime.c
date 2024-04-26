@@ -1,6 +1,6 @@
-#include <cs50.h>
 #include <math.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 bool prime(int number);
 
@@ -9,14 +9,16 @@ int main(void)
     int min;
     do
     {
-        min = get_int("Minimum: ");
+        printf("Minimum: ");
+        scanf("%d", &min);
     }
     while (min < 1);
 
     int max;
     do
     {
-        max = get_int("Maximum: ");
+        printf("Maximum: ");
+        scanf("%d", &max);
     }
     while (min >= max);
 
