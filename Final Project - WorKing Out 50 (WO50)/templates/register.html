@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock title %}
+
+{% block main %}
+<!-- Creating A Form For Registration -->
+<form method="post" style="margin-top: 5%; margin-left: 10%; margin-right: 10%; margin-bottom: 5%; text-align: center;" class="form-container">
+
+    <!-- Name Input -->
+    <div class="form-group mb-3">
+        <div class="input-group">
+            <span class="input-group-text">👨🏻</span>
+            <input type="text" class="form-control" id="full-name" name="full-name" placeholder="Full Name" aria-label="FullName">
+        </div>
+    </div>
+
+    <!-- Username Input -->
+    <div class="form-group mb-3">
+        <div class="input-group">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username" aria-label="Username">
+        </div>
+    </div>
+
+    <!-- Password Input -->
+    <div class="form-group mb-3">
+        <div class="input-group">
+            <span class="input-group-text">*</span>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" aria-label="Password">
+
+            <!-- Confirmation Password Input -->
+            <span class="input-group-text">*</span>
+            <input type="password" class="form-control" id="confirmation_password" name="confirmation_password" placeholder="Confirmation Password" aria-label="Confirmation Password">
+        </div>
+    </div>
+
+    <div class="form-group mb-3">
+        <div class="input-group">
+            <!-- Nation/Country Input -->
+            <span class="input-group-text">🗺️</span>
+            <select class="form-select" id="country" name="country">
+                <!-- Creating Jinja Loop For The List Of Countries -->
+                <option value="select" disabled selected>Select...</option>
+                {% for nation in nations %}
+                    <option value="{{ nation }}">{{ nation }}</option>
+                {% endfor %}
+            </select>
+
+            <!-- Age Input -->
+            <span class="input-group-text">👧🏻</span>
+            <input type="number" class="form-control" name="age" placeholder="Age (in Years)" aria-label="Age">
+        </div>
+    </div>
+
+    <!-- Height -->
+    <div class="form-group mb-3">
+        <div class="input-group">
+            <span class="input-group-text">cm</span>
+            <input type="number" class="form-control" name="height" placeholder="Height (in Centimeters)" aria-label="Height">
+        </div>
+    </div>
+
+    <!-- Weight -->
+    <div class="form-group mb-3"></div>
+        <div class="input-group">
+            <span class="input-group-text">🏋🏻‍♂️</span>
+            <input type="number" class="form-control" name="weight" placeholder="Weight (in Kilograms)" aria-label="WeightKgs">
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-group mb-3" style="margin-top: 1%;">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+</form>
+{% endblock main %}

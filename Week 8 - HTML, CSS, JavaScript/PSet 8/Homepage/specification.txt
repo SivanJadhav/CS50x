@@ -1,0 +1,40 @@
+# Mention the Tags Used In
+
+## HTML:
+    (Exclude: <html>, <head>, <body>, and <title>)
+
+    -- <meta>
+    -- <link>
+    -- <script>
+    -- <h1>
+    -- <img>
+    -- <ul>
+    -- <li>
+    -- <div>
+
+# And Mention Selectors and Properties Used In
+
+## CSS:
+    
+    ### Selectors:
+        -- tag(body)
+        -- class(header)
+        -- id(name)
+        -- tag with type(input[type="text"])
+        -- class with action(.section:hover)
+
+    ### Properties:
+        -- action(hover)
+        -- background-color
+        -- color
+        -- font-size
+        -- padding
+        -- text-align
+        -- transition
+
+# How I'll Use 
+    ## JavaScript:
+        I will make my quiz function with that
+    
+    ## Bootstrap:
+        I will specifically use buttons and its fluid stuff.

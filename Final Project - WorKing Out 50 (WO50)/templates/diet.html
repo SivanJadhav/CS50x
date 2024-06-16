@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block titl %}
+    Diet
+{% endblock titl %}
+
+{% block main %}
+    <div class="container">
+        <h1 class="mt-4">Food Nutrients</h1>
+        <div class="row">
+            {% for hint in data.hints %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ hint.food.image }}" class="card-img-top" alt="{{ hint.food.label }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ hint.food.label }}</h5>
+                            <p class="card-text">
+                                <strong>Calories:</strong> {{ hint.food.nutrients.ENERC_KCAL }} kcal<br>
+                                <strong>Protein:</strong> {{ hint.food.nutrients.PROCNT }} g<br>
+                                <strong>Fat:</strong> {{ hint.food.nutrients.FAT }} g<br>
+                                <strong>Carbs:</strong> {{ hint.food.nutrients.CHOCDF }} g<br>
+                                <strong>Fiber:</strong> {{ hint.food.nutrients.FIBTG }} g
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+{% endblock main %}

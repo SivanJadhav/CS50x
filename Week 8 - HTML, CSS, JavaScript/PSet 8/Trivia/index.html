@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script src="logic.js">
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>In which country is chewing gum banned?</h3>
+
+                <button class="incorrect">U.S.A</button>
+                <button class="incorrect">India</button>
+                <button class="correct">Singapore</button>
+                <button class="incorrect">Bhutan</button>
+
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Who discovered the theory of Relativity</h3>
+                <form>
+                    <input autocomplete="off" placeholder="Answer" type="text">
+                    <button id="check">Check Answer</button>
+
+                    <p id="feedback2"></p>
+                </form>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+I would characterize their audio aura by the energy, danceability, and loudness. If they listen higher energy songs that might mean they are active and energetic, and they might be happy and neutral most of the times. If they listen to songs with more danceability value, they may be quite energetic and active most of the times, while their mood might be happy and calm. If they listen to very loud songs they might be angry and energetic.
+
+My way of calculating is not the best, because the deepness of the lyrics the tone of the artist play a lot a big role in the persons aura. I might use some AI to get the theme of their favorite songs and the BGM and artist's tone to get better. I don't think we can be very accurate with their aura.

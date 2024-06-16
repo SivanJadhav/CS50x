@@ -28,7 +28,7 @@ int main(void)
         return 1;
     }
 
-    printf("Before x Was: %i| Before y Was: %i\n",*x ,*y);
+    printf("Before x Was: %i| Before y Was: %i\n", *x, *y);
 
     swap(x, y);
 

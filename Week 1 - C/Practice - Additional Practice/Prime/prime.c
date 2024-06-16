@@ -1,6 +1,6 @@
 #include <math.h>
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 bool prime(int number);
 

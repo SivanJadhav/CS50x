@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock title %}
+
+{% block main %}
+<!-- Creating A Form For Logging In The Website -->
+<form method="post" style="margin-top: 5%; margin-left: 10%; margin-right: 10%; margin-bottom: 5%; text-align: center;" class="form-container">
+
+    <!-- Username Input -->
+    <div class="form-group mb-3">
+        <div class="input-group">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username" aria-label="Username">
+        </div>
+    </div>
+
+    <!-- Password Input -->
+    <div class="form-group mb-3">
+        <div class="input-group">
+            <span class="input-group-text">*</span>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" aria-label="Password">
+        </div>
+    </div>
+
+    <!-- Button For Submission -->
+    <div class="form-group mb-3" style="margin-top: 1%;">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+</form>
+{% endblock main %}

@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 typedef struct node
 {
@@ -8,7 +8,7 @@ typedef struct node
     struct node *right;
 } node;
 
-bool search(node* tree, int number )
+bool search(node *tree, int number)
 {
     if (tree == NULL)
     {

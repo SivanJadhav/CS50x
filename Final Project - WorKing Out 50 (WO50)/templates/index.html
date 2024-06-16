@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dashboard
+{% endblock title %}
+
+{% block main %}
+    <div class="container mt-5">
+        <h1 class="text-center">Fitness Exercises</h1>
+        <div class="row mt-4">
+            {% for exercise in exercises %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ exercise.name }}</h2>
+                        <p class="card-text">{{ exercise.description }}</p>
+                        <p class="card-text"><strong>Difficulty:</strong> {{ exercise.difficulty }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock main %}

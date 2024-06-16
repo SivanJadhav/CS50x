@@ -122,9 +122,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Calculate average RGB values
-            copy[i][j].rgbtRed = round((float)sumRed / count);
-            copy[i][j].rgbtGreen = round((float)sumGreen / count);
-            copy[i][j].rgbtBlue = round((float)sumBlue / count);
+            copy[i][j].rgbtRed = round((float) sumRed / count);
+            copy[i][j].rgbtGreen = round((float) sumGreen / count);
+            copy[i][j].rgbtBlue = round((float) sumBlue / count);
         }
     }
 

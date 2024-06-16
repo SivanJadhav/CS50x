@@ -25,9 +25,9 @@ int main(void)
     n->number = 1;
 
     // Giving Next A Adress
-    n->next =  NULL;
+    n->next = NULL;
 
-    // Making List Equivalent To It 
+    // Making List Equivalent To It
     list = n;
 
     // Checking By printf

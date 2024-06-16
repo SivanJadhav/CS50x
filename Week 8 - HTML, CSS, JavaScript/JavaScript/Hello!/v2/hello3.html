@@ -1,0 +1,32 @@
+<!-- This Version of Hello Uses Dom -->
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+
+        <title>Hello! 3</title>
+    
+        <script>
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').addEventListener('submit', function(event) {
+                    alert("Hello, " + document.querySelector('#name').value);
+                    event.preventDefault();
+                });
+            });
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <form>
+            <input type="text" name="Name" id="name" type="submit" placeholder="Name">
+            <button>Submit</button>
+        </form>
+
+    </body>
+
+</html>

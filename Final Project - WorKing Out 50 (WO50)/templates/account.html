@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock title %}
+
+{% block main %}
+    <!-- Showing Current Account Details -->
+    <h1 style="text-align: center;">Current Details</h1>
+
+    <h2 style="text-align: center;">Username: {{username}}</h2>
+
+    <form method="post" style="margin-top: 5%; margin-left: 10%; margin-right: 10%; margin-bottom: 5%; text-align: center;" class="form-container">
+
+        <!-- Letting Users Select What They Want To Change -->
+        <div class="form-group mb-3">
+            <div class="input-group">
+                <select class="form-select" name="select">
+                    <option value="select" disabled selected>Select...</option>
+                    <option value="username">Username</option>
+                    <option value="password">Password</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Current Data Input -->
+        <div class="form-group mb-3">
+            <div class="input-group">
+                <input type="text" class="form-control" name="crr_data" placeholder="Current Username/Password" aria-label="CrrData">
+            </div>
+        </div>
+        
+        <!-- New/Wanted Data Input -->
+        <div class="form-group mb-3">
+            <div class="input-group">
+                <input type="text" class="form-control" name="new_data" placeholder="New Username/Password" aria-label="NewData">
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group mb-3" style="margin-top: 1%;">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+    </form>
+{% endblock main %}
